@@ -14,6 +14,8 @@ console.log("2" + 1)
 console.log("1" + 2)    // String Concatenation happens with the + operator when one operand is a string.
 console.log("2"**3)   
 console.log("2"-1)
+console.log(1 - "2")
+
 
 console.log("-------")
 
