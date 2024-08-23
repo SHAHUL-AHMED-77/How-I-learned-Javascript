@@ -7,3 +7,6 @@ const Repo = 10
 // Repo = 20    // Not Allowed
 
 console.log(`${name} has ${Repo} Repositories`)      // String interpolation
+
+
+console.log(`${Repo}`)
