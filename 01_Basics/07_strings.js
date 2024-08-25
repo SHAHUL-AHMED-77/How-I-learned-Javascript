@@ -147,9 +147,14 @@ console.log(drink1.replace('Sprite','Maaza'));
 
 console.log(drink.includes('Cola'));
 
+console.log(drink1.startsWith("Coco"));
+
+console.log(drink1.endsWith("Coco"));
+
+
 const str1 = "Thumbs"
 
 const str2 = "Ups"
 
-console.log(str1.concat('-',str2));
+console.log(str1.concat(' ',str2));
 
