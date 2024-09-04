@@ -10,7 +10,7 @@ const mon = 1
 switch (mon) {
     case 1:
         console.log("Jan");
-        break;              // If break is not all conditions will execute except Default
+        break;              // If break is not all conditions will execute 
     case 2:
         console.log("Feb");
         break;
