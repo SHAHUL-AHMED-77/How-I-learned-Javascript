@@ -1,0 +1,19 @@
+body{
+    background-color: #212121;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+    font-size: 40px;
+}
+#time{
+    color: black;
+    background-color: orange;
+    font-size: 20px;
+    padding: 10px;
+}
