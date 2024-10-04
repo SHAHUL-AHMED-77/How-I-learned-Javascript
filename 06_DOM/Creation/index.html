@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Creation</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+</style>
+<body>
+    
+</body>
+<script>
+    const h = document.createElement('h1')
+    console.log(h);
+    h.id = "head"
+    h.className = "C-heading"
+    // h.id = Math.round(Math.random()*10+1)
+    h.style.color = "Red"
+    h.style.backgroundColor = "White"
+    h.innerText = "Lucy"
+
+    //Both Methods Can be used for adding text to the Node
+
+    const addtext = document.createTextNode("Lucifer")
+    // h.appendChild(addtext)
+
+    //Attaching Childnode to the body
+
+    document.body.appendChild(h)
+</script>
+</html>
