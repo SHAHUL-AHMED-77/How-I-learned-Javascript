@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Demo</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myDiv">Interact with Me!</div>
+    <div id="result"></div>
+    
+    <form id="myForm">
+        <label for="myInput">Type something: </label>
+        <input type="text" id="myInput">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        const result = document.getElementById('result');
+        const myForm = document.getElementById('myForm');
+        const myInput = document.getElementById('myInput');
+
+        // 1. Click event: Triggered when an element is clicked.
+        myDiv.addEventListener('click', () => {
+            myDiv.style.backgroundColor = 'lightgreen';
+            result.innerHTML = 'Div clicked!';
+        });
+
+        // 2. Double-click event: Fired on a double-click action.
+        myDiv.addEventListener('dblclick', () => {
+            myDiv.style.backgroundColor = 'purple';
+            result.innerHTML = 'Div double-clicked!';
+        });
+
+        // 3. Mouse over event: Triggered when the mouse enters an element.
+        myDiv.addEventListener('mouseover', () => {
+            myDiv.style.backgroundColor = 'yellow';
+            result.innerHTML = 'Mouse is over the div!';
+        });
+
+        // 4. Mouse out event: Fired when the mouse leaves an element.
+        myDiv.addEventListener('mouseout', () => {
+            myDiv.style.backgroundColor = 'lightblue';
+            result.innerHTML = 'Mouse left the div!';
+        });
+
+        // 5. Key press event: Triggered when a character key is pressed.
+        document.addEventListener('keypress', (event) => {
+            result.innerHTML = 'Key pressed: ' + event.key;
+        });
+
+        // 6. Key down event: Fired when any key is pressed down.
+        document.addEventListener('keydown', (event) => {
+            result.innerHTML = 'Key down: ' + event.key;
+        });
+
+        // 7. Key up event: Triggered when a key is released.
+        document.addEventListener('keyup', (event) => {
+            result.innerHTML = 'Key up: ' + event.key;
+        });
+
+        // 8. Change event: Fired when an input's value changes.
+        myInput.addEventListener('change', () => {
+            result.innerHTML = 'Input value changed: ' + myInput.value;
+        });
+
+        // 9. Submit event: Triggered when a form is submitted.
+        myForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            result.innerHTML = 'Form submitted with value: ' + myInput.value;
+        });
+
+        // 10. Focus event: Fired when an element gains focus.
+        myInput.addEventListener('focus', () => {
+            result.innerHTML = 'Input focused!';
+        });
+
+        // 11. Blur event: Triggered when an element loses focus.
+        myInput.addEventListener('blur', () => {
+            result.innerHTML = 'Input lost focus!';
+        });
+
+        // 12. Load event: Fired when the page or resource fully loads.
+        window.addEventListener('load', () => {
+            result.innerHTML = 'Page fully loaded!';
+        });
+
+        // 13. Resize event: Triggered when the browser window is resized.
+        window.addEventListener('resize', () => {
+            result.innerHTML = 'Window resized!';
+        });
+
+        // 14. Scroll event: Fired when the page or element is scrolled.
+        window.addEventListener('scroll', () => {
+            result.innerHTML = 'Page scrolled!';
+        });
+
+        // 15. Input event: Triggered when input value changes in real-time.
+        myInput.addEventListener('input', (event) => {
+            result.innerHTML = 'Current input value: ' + event.target.value;
+        });
+
+        // 16. Context menu event (right-click): Fired when the right-click menu is opened.
+        myDiv.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            result.innerHTML = 'Right-click is disabled!';
+        });
+
+        // 17. Drag and Drop events: Triggered during drag and drop actions.
+        myDiv.setAttribute('draggable', 'true');
+        
+        myDiv.addEventListener('dragstart', (event) => {
+            result.innerHTML = 'Drag started';
+        });
+
+        myDiv.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            result.innerHTML = 'Drag over the div';
+        });
+
+        myDiv.addEventListener('drop', (event) => {
+            event.preventDefault();
+            result.innerHTML = 'Dropped on the div!';
+        });
+
+        // 18. Animation event (CSS animation example): Fired when a CSS animation starts or ends.
+        myDiv.addEventListener('animationstart', () => {
+            result.innerHTML = 'Animation started';
+        });
+
+        myDiv.addEventListener('animationend', () => {
+            result.innerHTML = 'Animation ended';
+        });
+
+        // 19. Transition event (CSS transition example): Triggered when a CSS transition finishes.
+        myDiv.addEventListener('transitionend', () => {
+            result.innerHTML = 'Transition ended';
+        });
+
+        // 20. Touchstart event (for mobile): Fired on touch interactions (mobile devices).
+        myDiv.addEventListener('touchstart', () => {
+            myDiv.style.backgroundColor = 'orange';
+            result.innerHTML = 'Div touched!';
+        });
+    </script>
+    
+</body>
+</html>
