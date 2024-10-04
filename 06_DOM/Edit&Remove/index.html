@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Remove Elements</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: azure;
+    }
+</style>
+<body>
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    // Method-1
+
+    function addlang(a){
+        const myli = document.createElement('li')     
+        myli.innerHTML = `${a}`
+        document.querySelector('.lang').appendChild(myli)
+    }
+    addlang("python")
+    addlang("Java")
+
+    // Method-2
+
+    function addlang2(b){
+        const myli = document.createElement('li')
+        myli.appendChild(document.createTextNode(b))
+        document.querySelector('.lang').appendChild(myli)
+    }
+    addlang2("cpp")
+    addlang2("Ruby")
+
+    //Editing Elements
+
+    const langsecond = document.querySelector('li:nth-child(5)')
+    // langsecond.outerHTML = '<li>Typescript</li>'
+    // langsecond.innerHTML = "Swift"
+    const myli = document.createElement('li')
+    myli.textContent = "Swift"
+    // document.querySelector('.lang').appendChild(myli)  // Using querySelector
+    langsecond.replaceWith(myli) // Using ReplaceWith
+
+    // Removing Elements
+
+    const removelang = document.querySelector('li:nth-child(4)')
+    removelang.remove()
+
+    
+</script>
+</html>
