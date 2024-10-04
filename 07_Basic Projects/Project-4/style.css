@@ -1,0 +1,258 @@
+body{
+    background-color: #212121;
+    color: white;
+}
+.main{
+    border: 12px solid rgb(255, 255, 255);
+    margin: 0 500px;
+}
+.container{
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+.container p{
+    font-size: 20px;
+    color: yellow;
+}
+label{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+input{
+    padding: 10px;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    background-color: rgb(55, 255, 0);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    text-align: center;
+}
+.result p{
+    font-size: 25px;
+    color: chocolate;
+}
+p  #chances,#pguess{
+    color: rgb(217, 0, 255);
+}
+
+#startgame{
+    border: 4px solid black;
+    padding: 10px;
+    background-color: yellow;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+/* Mobile (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Mobile styles */
+    .main{
+        margin: 0 100px;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    h1{
+        font-size: 18px;
+    }
+    .container p{
+        font-size: 12px;
+    }
+    label{
+        font-size: 15px;
+    }
+    input{
+        padding: 2px;
+        font-size: 12px;
+    }
+    input[type="submit"]{
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .result p{
+        font-size: 10px;
+        color: chocolate;
+    }
+    p  #chances,#pguess{
+        color: rgb(217, 0, 255);
+    }
+    
+    #startgame{
+        border: 2px;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+    
+}
+
+/* Small devices (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Small device styles */
+    .main{
+        margin: 0 170px;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    h1{
+        font-size: 20px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+    label{
+        font-size: 17px;
+    }
+    input{
+        padding: 3px;
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    .result p{
+        font-size: 13px;
+        color: chocolate;
+    }
+    p  #chances,#pguess{
+        color: rgb(217, 0, 255);
+    }
+    
+    #startgame{
+        border: 4px;
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+}
+
+/* Tablets (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet styles */
+    .main{
+        margin: 0 300px;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    h1{
+        font-size: 24px;
+    }
+    .container p{
+        font-size: 16px;
+    }
+    label{
+        font-size: 18px;
+    }
+    input{
+        padding: 4px;
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .result p{
+        font-size: 14px;
+        color: chocolate;
+    }
+    p  #chances,#pguess{
+        color: rgb(217, 0, 255);
+    }
+    
+    #startgame{
+        border: 6px;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}
+
+Laptops/Small Desktops (1025px to 1200px)
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Laptop and small desktop styles */
+    .main{
+        margin: 0 300px;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    h1{
+        font-size: 24px;
+    }
+    .container p{
+        font-size: 16px;
+    }
+    label{
+        font-size: 18px;
+    }
+    input{
+        padding: 4px;
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .result p{
+        font-size: 14px;
+        color: chocolate;
+    }
+    p  #chances,#pguess{
+        color: rgb(217, 0, 255);
+    }
+    
+    #startgame{
+        border: 6px;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}
+
+Large Desktops (1201px and up) */
+/* @media only screen and (min-width: 1201px) {
+    /* Large desktop styles
+    .main{
+        margin: 0 300px;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    h1{
+        font-size: 24px;
+    }
+    .container p{
+        font-size: 16px;
+    }
+    label{
+        font-size: 18px;
+    }
+    input{
+        padding: 4px;
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .result p{
+        font-size: 14px;
+        color: chocolate;
+    }
+    p  #chances,#pguess{
+        color: rgb(217, 0, 255);
+    }
+    
+    #startgame{
+        border: 6px;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+} */

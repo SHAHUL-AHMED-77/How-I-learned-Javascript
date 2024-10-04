@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+    <h1>Number Guessing Game</h1>
+    <p>Guess the Number from 1 to 100</p>
+    <p>You Have 10 Attempts</p>
+    </div>
+    <form>
+        <label for="gfield">Guess a Number</label>
+        <input type="number"  id="gfield">
+        <input type="submit" id="sub" value="Submit">
+    </form>
+    <div class="result">
+        <p>Previous Guesses :<span id="pguess"></span></p>
+        <p>Remaining Attempts :<span id="chances">10</span></p>
+        <p id="highlow"></p>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
