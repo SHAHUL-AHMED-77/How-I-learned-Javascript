@@ -1,0 +1,24 @@
+body{
+    background-color: #212121;
+    text-align: center;
+}
+button{
+    font-size: 50px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: yellow;
+}
+.table {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.tds th,td{
+    border:2px solid white;
+    padding: 10px;
+}
+.tds th{
+    color: red;
+}
