@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object Example</title>
+</head>
+<body>
+    <button id="clickButton">Click Me</button>
+    <input type="text" id="inputField" placeholder="Type here...">
+
+    <script>
+        // Mouse Event: Handling a click on the button
+        const button = document.getElementById('clickButton');
+
+        button.addEventListener('click', function(e) {
+            // Event type
+            console.log('Event Type:', e.type);  // click
+
+            // Timestamp (when the event was created)
+            console.log('Timestamp:', e.timeStamp);
+
+            // preventDefault: Can be used to prevent default action (e.g., form submission)
+            e.preventDefault();  // No default action here, but could prevent a form submit
+            console.log('Prevented Default action.');
+
+            // Target: The element that triggered the event
+            console.log('Target element:', e.target);
+
+            // toElement: Same as target, but for mouse events (deprecated)
+            console.log('To Element:', e.toElement);
+
+            // srcElement: Same as target (used for compatibility with older browsers)
+            console.log('Source Element:', e.srcElement);
+
+            // Current Target: The element to which the event listener is attached (could be different from target in bubbling)
+            console.log('Current Target:', e.currentTarget);
+
+            // ClientX & ClientY: The mouse position relative to the viewport (window)
+            console.log('Mouse position (clientX, clientY):', e.clientX, e.clientY);
+
+            // ScreenX & ScreenY: The mouse position relative to the screen
+            console.log('Mouse position (screenX, screenY):', e.screenX, e.screenY);
+
+            // Modifier keys (altKey, ctrlKey, shiftKey)
+            console.log('Alt Key pressed:', e.altKey);
+            console.log('Ctrl Key pressed:', e.ctrlKey);
+            console.log('Shift Key pressed:', e.shiftKey);
+        });
+
+        // Keyboard Event: Handling keypress in the input field
+        const input = document.getElementById('inputField');
+
+        input.addEventListener('keydown', function(e) {
+            // Event type
+            console.log('Event Type:', e.type);  // keydown
+
+            // KeyCode: The code of the key that was pressed
+            console.log('Key Code:', e.keyCode);
+
+            // Modifier keys (altKey, ctrlKey, shiftKey)
+            console.log('Alt Key pressed:', e.altKey);
+            console.log('Ctrl Key pressed:', e.ctrlKey);
+            console.log('Shift Key pressed:', e.shiftKey);
+        });
+    </script>
+</body>
+</html>
