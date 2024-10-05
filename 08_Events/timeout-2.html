@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Start And Stop</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let Interval ;
+    const date = new Date()
+    let locdate = date.toLocaleTimeString()
+    const saydate = ()=>{
+        console.log(` Timenow :${locdate}`)
+    }
+    document.querySelector("#start")
+        .addEventListener('click',()=>{
+        Interval = setInterval(saydate, 1000)
+    })
+    document.querySelector("#stop")
+        .addEventListener("click",()=>{
+            clearInterval(Interval)
+        })  
+</script>
+
+</html>

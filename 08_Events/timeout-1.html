@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async in JS</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const func = ()=>{
+        const text = document.querySelector('h1').innerHTML = "Javascript"
+    }
+    //setTimeout :-
+
+    const clear = (func,2000)
+    setTimeout(()=>{
+        console.log("Two Seconds");
+    },2000)
+
+    //clearTimeout :-
+
+    const b = document.querySelector('#stop')
+    b.addEventListener('click',()=>{
+        clearTimeout(clear)
+        console.log("Stopped");
+    })
+</script>
+</html>
