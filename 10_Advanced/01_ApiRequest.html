@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            height: 400px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: bisque;
+        }
+        img{
+            height: 200px;
+            width: 250px;
+            padding: 20px;
+        }
+        h1{
+            font-family: cursive;
+            text-align: center;
+        }
+        button{
+            font-size: 20px;
+            margin: 0 120px;
+            background-color: rgb(0, 0, 0);
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="" alt="">
+        <h1>-</h1>
+        <button class="btn">Click</button>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector('.btn')
+    const img = document.querySelector('img')
+    const follow = document.querySelector('h1')
+
+const request = 'https://api.github.com/users/hiteshchoudhary';
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', request);
+
+// Attach a listener for when the request loads
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);  // Parse the JSON data
+        console.log(typeof data);  // Should be "object" now
+        console.log(data);         // Full user data from GitHub
+        console.log(data.followers); // To get the number of followers
+        btn.addEventListener('click',()=>{
+            img.setAttribute("src" , `${data.avatar_url}`);
+            follow.innerHTML = `${data.followers}`
+        })
+    } else {
+        console.log('Error: ' + xhr.status);  // Handle error case
+    }
+};
+
+xhr.send();
+</script>
+</html>
