@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 500px;
+    width: 400px;
+    border: 5px solid white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;justify-content: center;
+}
+img{
+    height: 250px;
+    width: 200px;
+    margin: 10px 70px;
+}
+h1{
+    font-size: 20px;
+    padding: 5px ;
+}
+.follow,.name,.repo{
+    color: red;
+}
+button{
+    padding: 10px;
+    width: 50%;
+    margin: 10px 80px;
+    background-color: blue;
+    color: azure;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 10px 15px rgba(93, 92, 92, 0.2), 
+            0 4px 6px rgba(177, 177, 177, 0.1);
+
+}
